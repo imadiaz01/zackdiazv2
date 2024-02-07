@@ -1,0 +1,120 @@
+
+:root {
+    --base-size: 62.5%;
+    --multiplier: 1;
+    --base-font-size: calc(1.9rem * var(--multiplier));
+    --space: calc(3.2rem * var(--multiplier));
+    --vspace-0_125: calc(0.125 * var(--space));
+    --vspace-0_25: calc(0.25 * var(--space));
+    --vspace-0_375: calc(0.375 * var(--space));
+    --vspace-0_5: calc(0.5 * var(--space));
+    --vspace-0_625: calc(0.625 * var(--space));
+    --vspace-0_75: calc(0.75 * var(--space));
+    --vspace-0_875: calc(0.875 * var(--space));
+    --vspace-1: calc(var(--space));
+    --vspace-1_25: calc(1.25 * var(--space));
+    --vspace-1_5: calc(1.5 * var(--space));
+    --vspace-1_75: calc(1.75 * var(--space));
+    --vspace-2: calc(2 * var(--space));
+    --vspace-2_5: calc(2.5 * var(--space));
+    --vspace-3: calc(3 * var(--space));
+    --vspace-3_5: calc(3.5 * var(--space));
+    --vspace-4: calc(4 * var(--space));
+    --vspace-4_5: calc(4.5 * var(--space));
+    --vspace-5: calc(5 * var(--space));
+    --text-scale-ratio: 1.2;
+    --text-size: var(--base-font-size);
+    --text-xs: calc((var(--text-size) / var(--text-scale-ratio)) / var(--text-scale-ratio));
+    --text-sm: calc(var(--text-xs) * var(--text-scale-ratio));
+    --text-md: calc(var(--text-sm) * var(--text-scale-ratio) * var(--text-scale-ratio));
+    --text-lg: calc(var(--text-md) * var(--text-scale-ratio));
+    --text-xl: calc(var(--text-lg) * var(--text-scale-ratio));
+    --text-xxl: calc(var(--text-xl) * var(--text-scale-ratio));
+    --text-xxxl: calc(var(--text-xxl) * var(--text-scale-ratio));
+    --text-display-1: calc(var(--text-xxxl) * var(--text-scale-ratio));
+    --text-display-2: calc(var(--text-display-1) * var(--text-scale-ratio));
+    --text-display-3: calc(var(--text-display-2) * var(--text-scale-ratio));
+    --vspace-btn: var(--vspace-2);
+}
+
+
+.header_container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    background-color: rgb(30, 61, 63, 1);
+    justify-items: center;
+    max-height: 50rem;
+}
+
+.header_container h1 {
+    
+    --text-huge-size : 12.4rem;
+    font-size: var(--text-huge-size);
+    color: rgb(232, 230, 227);
+    transform: translateY(0px);
+    opacity: 1;
+    min-width: 50rem;
+    line-height: 1;
+    letter-spacing: -0.020em;
+    z-index: 1;
+    padding-top: 5rem;
+}
+
+.intro-header {
+    padding-top: 1rem;
+    grid-column: 2;
+    grid-row: 1/2;
+    display: grid;
+    justify-items: center;
+    grid-template-columns: repeat(3, 1fr);
+    
+}
+
+h2 {
+    --text-xxxl: calc(var(--text-xxl) * var(--text-scale-ratio));
+    font: 400 xx-large "Inter", sans-serif; /* Specify font size and weight */
+    line-height: 1.0998;
+    letter-spacing: -.01em;
+    padding-top: 3rem;
+    grid-column: 1;
+    grid-row: 2;
+    z-index: 1;
+    font-size: var(--text-xxl);
+}
+
+.mas {
+
+    color: hsla(336, 13%, 26%, 1)
+}
+
+.header_img {
+    margin-top: -6rem;
+    margin-bottom: -10rem;
+    aspect-ratio: 1/1;
+    background-image: url(https://zackdiaz.com/images/intro-bg.webp);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    position: relative;
+    width: 100%;
+    grid-column: 1;
+    grid-row: 2;
+    z-index: 0;
+}
+
+.header_img:after {
+    display: block;
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(180deg, black 5%, rgba(0, 0, 0, 0) 100%);
+    pointer-events: none;
+    opacity: .12;
+}
+
+-webkit-tap-highlight-color: rgba(232, 230, 227, 0);
