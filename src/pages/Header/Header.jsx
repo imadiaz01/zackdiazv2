@@ -6,8 +6,11 @@ const Header = () => {
 
     <div className='header_container'>
       <div className='intro-header'>
+        
       <h1>Zack Diaz</h1>
+      <div className='below-introheader'>
       <h2>Singer <span className='mas'>+</span> Songwriter</h2>
+      </div>
       <div className='header_img'></div>
       </div>
     </div>

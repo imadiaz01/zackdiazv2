@@ -16,3 +16,11 @@ export const ssStickyHeader = function() {
         }
     });
 };
+
+
+export const scrollToSection = (sectionId) => {
+    const section = document.getElementById(sectionId);
+    if (section) {
+      section.scrollIntoView({ behavior: 'smooth' });
+    }
+  };

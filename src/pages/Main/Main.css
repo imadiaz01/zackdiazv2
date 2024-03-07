@@ -1,5 +1,178 @@
-.separator {
 
-    padding-top: 20rem;
+
+
+
+.bio {
+    padding-top: 50rem;
+display: grid;
+grid-template-columns: repeat(5, 20%);
+
 
 }
+
+.bio h1 {
+    color: #aba398;
+    font-family: var(--font-1);
+    font-size: calc(var(--text-size) * 1.1053);
+    font-weight: 300;
+    line-height: var(--vspace-1);
+    margin-top: 0;
+    margin-bottom: var(--vspace-0_25);
+    margin-left: 0.1em;
+    position: relative;
+    grid-column-start: 2;
+    grid-column-end: 5;
+
+}
+
+p {
+   color: #dfdcd8;
+   grid-column: 2;
+    max-width: 95rem ;
+    font-family: var(--font-1);
+    grid-column-start: 2;
+    grid-column-end: 5;
+}
+
+.repertoire {
+    padding-top: 7rem;
+    display: grid;
+    grid-template-columns: repeat(5, 20%);
+    grid-template-rows: repeat(4, 1fr);
+}
+
+.repertoire h1 {
+    color: #aba398;
+    font-family: var(--font-1);
+    font-size: calc(var(--text-size) * 1.1053);
+    font-weight: 300;
+    line-height: var(--vspace-1);
+    margin-top: 0;
+    margin-bottom: var(--vspace-0_25);
+    margin-left: 0.1em;
+    position: relative;
+   grid-column: 2/5;
+    grid-row: 1;
+}
+
+.repertoire h2 {
+    --text-huge: 7rem;
+    --text-multiplier: 1;
+    font-family: var(--font-2);
+    font-weight: 400;
+    font-size: calc(var(--text-huge)* var(--text-multiplier));
+    line-height: 1.0638;
+    letter-spacing: -0.02em;
+    color: var(--color-text-dark);
+    margin-top: 0;
+    grid-column: 2/5;
+    grid-row: 2;
+    
+}
+
+/* --------------------------------------------------------------------
+ * ## about timelines before
+ * -------------------------------------------------------------------- */
+
+
+
+.timeline-1::before {
+    content          : "";
+    width            : 1px;
+    height           : calc(100% - var(--timeline-top-adjust));
+    background-color : var(--color-border);
+    position         : absolute;
+    top              : var(--timeline-top-adjust);
+    left             : calc(var(--timeline-vertical-border-pos) + var(--gutter));
+}
+
+.s-about .text-subtitle {
+    padding-left  : var(--timeline-left-padding);
+    line-height   : var(--subtitle-line-height);
+    margin-bottom : var(--vspace-0_25);
+    position      : relative;
+}
+
+.s-about .text-subtitle::before {
+    content          : "";
+    display          : block;
+    height           : 1px;
+    width            : 3.2rem;
+    background-color : var(--color-border);
+    position         : absolute;
+    top              : 50%;
+    left             : calc(var(--timeline-vertical-border-pos) + 1px);
+}
+
+
+/* --------------------------------------------------------------------
+ * ## about timelines
+ * -------------------------------------------------------------------- */
+
+ .timeline-container {
+display: grid;
+justify-content: space-evenly;
+
+ }
+
+
+.timeline {
+    margin-top    : var(--vspace-1_5);
+    padding-right : 1vw;
+    position      : relative;
+}
+
+.timeline-1 {
+    grid-column: 1/2;
+}
+
+.timeline-2 {
+    grid-column: 2/3;
+}
+
+.timeline__block {
+    padding-left   : var(--timeline-left-padding);
+    padding-bottom : var(--vspace-0_5);
+    position       : relative;
+}
+
+.timeline__block:last-child {
+    padding-bottom : 0;
+}
+
+.timeline__bullet {
+    display          : block;
+    height           : 4.4rem;
+    width            : 3px;
+    background-color : var(--color-text-dark);
+    position         : absolute;
+    top              : 0;
+    left             : calc(var(--timeline-vertical-border-pos) - 1px);
+}
+
+.timeline__title {
+    font-family   : var(--font-2);
+    font-weight   : 400;
+    font-size     : var(--text-xl);
+    line-height   : 1.0966;
+    margin-top    : 0;
+    margin-bottom : var(--vspace-0_125);
+}
+
+.timeline__meta {
+    font-family   : var(--font-1);
+    font-weight   : 400;
+    font-size     : calc(var(--text-size) * 1.1053);
+    margin-top    : 0;
+    margin-bottom : var(--vspace-0_125);
+}
+
+.timeline__timeframe {
+    font-size      : calc(var(--text-size) * 0.7368);
+    line-height    : var(--vspace-0_75);
+    text-transform : uppercase;
+    letter-spacing : .15em;
+    color          : var(--color-1-dark);
+    margin-top     : -.2rem;
+}
+

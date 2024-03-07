@@ -3,7 +3,8 @@ import './Nav.css';
 import { library } from '@fortawesome/fontawesome-svg-core';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import * as Icons from '@fortawesome/free-brands-svg-icons';
-import { ssStickyHeader } from '../../main';
+import { ssStickyHeader, scrollToSection } from '../../main';
+
 
 
 
@@ -27,10 +28,10 @@ library.add(...iconList);
 
 <nav>
   <ul className='links_navbar'>
-    <li><a href="#intro">Intro</a></li>
-    <li><a href="#about">About</a></li>
-    <li><a href="#reper">Repertoire</a></li>
-    <li><a href="#contact">Contact</a></li>
+    <li><a  onClick={() => scrollToSection('Intro')}>Intro</a></li>
+    <li><a onClick={() => scrollToSection('About')}>About</a></li>
+    <li><a  onClick={() => scrollToSection('Reper')}>Repertoire</a></li>
+    <li><a onClick={() => scrollToSection('Contact')}>Contact</a></li>
   </ul>
   </nav>
   <ul className='links_navbar_social'>
