@@ -1,3 +1,50 @@
+:root {
+    --vspace-1      : 1.2rem;
+    --vspace-2      : 1.6rem;
+    --vspace-2_5    : 1.8rem;
+    --vspace-3      : 2.4rem;
+    --vspace-4      : 3.2rem;
+    --vspace-5      : 4.8rem;
+    --vspace-6      : 6.4rem;
+    --vspace-7      : 9.6rem;
+    --vspace-8
+/* -------------------------------------------------------------------
+ * ## grid variables
+ * ------------------------------------------------------------------- */
+    /* widths for rows and containers
+     */
+    --width-full     : 100%;
+    --width-max      : 1200px;
+    --width-wide     : 1400px;
+    --width-wider    : 1600px;
+    --width-widest   : 1800px;
+    --width-narrow   : 1000px;
+    --width-narrower : 800px;
+    --width-grid-max : var(--width-max);
+
+    /* gutter
+     */
+    --gutter         : 2rem;
+}
+
+/* on medium screen devices
+ */
+@media screen and (max-width: 1200px) {
+    :root {
+        --gutter : 1.8rem;
+    }
+}
+
+/* on mobile devices
+ */
+@media screen and (max-width: 600px) {
+    :root {
+        --gutter : 1rem;
+    }
+
+}
+
+
 /* ===================================================================
  * # FOOTER
  *
@@ -11,24 +58,40 @@
     padding-bottom : var(--vspace-2_5);
     font-weight    : 300;
     position       : relative;
+    margin-bottom: var(--vspace-2);
 }
 
 .contact-header {
+    display: grid;
     margin-bottom : var(--vspace-2);
-    grid-row: 1;
+    grid-row: 2;
     grid-column: 2/5;
+    justify-content: space-between;
+
+}
+
+.s-footer__social {
+    padding-top: 3vh;
 }
 
 .business {
-    padding-top: 1rem;
     grid-column : 1;
     grid-row: 2;
+  
 }
 
 .footer-contact {
 
-    grid-column : 4;
+    grid-column : 5/6;
     grid-row:2;
+}
+
+.getintouch {
+    grid-row: 1;
+    grid-column: 2/4;
+    margin-bottom: var(--vspace-2);
+    max-width: var(--width-grid-max);
+    justify-items:self-start;
 }
 
 .ss-copyright {
@@ -100,3 +163,33 @@
 }
 
 
+@media screen and (max-width: 1175px) {
+    .contact-header {
+        justify-content: center;
+        display: grid;
+        margin-bottom : var(--vspace-2);
+        grid-row: 2/3;
+        grid-column: 2/5;
+    }
+
+    .footer-contact {
+        padding-top:3rem;
+        grid-row: 3;
+        grid-column: 1/4;
+    }
+
+    .getintouch {
+        display: grid;
+    }
+
+    .text-huge-title{
+        grid-row:2;
+        grid-column: 1/2;
+    }
+
+    .footer {
+        display: grid;
+        grid-template-columns: repeat(5, 20%);
+
+    }
+}

@@ -2,7 +2,6 @@
   min-width: fit-content;
   --gutter: 2rem;
   --header-height: 10rem;
-    --color-body: rgb(30, 61, 63, 1);
     --box-shadow: 0 5px 5px rgba(0, 0, 0, 0.01), 0 5px 5px rgba(0, 0, 0, 0.01), 0 6px 6px rgba(0, 0, 0, 0.01);
 }
 
@@ -76,14 +75,19 @@
 .links_navbar {
   display: none;
 }
+.nav-container {
+  position: fixed ;
+}
 
 }
 
-@media only screen and (max-width: 800px) {
 
-  .links_navbar_social {
-    display: none;
-    
-  }
+
+  @media only screen and (max-width: 900px) {
+
+    .links_navbar_social {
+      display: none;
+    }
+
 
   }

@@ -1,27 +1,26 @@
-import React from 'react'
-import './footer.css'
+import React from 'react';
+import './footer.css';
 
 const Footer = () => {
   return (
     <div id='Contact' className='footer'>
 
-<div className="contact-header">
-    <div className="column lg-12">
+
+    <div className="getintouch">
         <h2 className="text-pretitle">Get In Touch</h2>
 
         <p className="text-huge-title">
             Contactanos
         </p>
-    </div>
+        </div>
 
+        <div className="contact-header">
     <div className="business">
         <p>
         Business inquiries only.
 
         </p><div className="s-footer__buttons">
             <a href="mailto:contact@zackdiaz.com" className="btn btn--primary u-fullwidth">Say Hello</a>
-
-        </div>
 
         <p></p>
     </div>
@@ -43,7 +42,7 @@ const Footer = () => {
                 <li><a href="tel:+18093278181">+18093278181</a></li>
             </ul>
         </div>
-
+        </div>
         <div className="s-footer__social">
             <h2 className="text-subtitle">
                 Connect

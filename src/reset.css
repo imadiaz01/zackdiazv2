@@ -47,35 +47,3 @@ video {
 }
 
 
-/* links */
-
-
-a {
-  color      : var(--color-1-dark);
-  transition : all 0.3s ease-in-out;
-}
-
-a:focus,
-a:hover,
-a:active {
-  color : var(--color-2-darker);
-}
-
-a:hover,
-a:active {
-  outline : 0;
-}
-
-
-
---color-border: rgba(0, 0, 0, .08);
---color-1-lighter: hsla(183, 22%, 68%, 1);
---color-1-light: hsla(183, 22%, 58%, 1);
---color-1-dark : hsla(183, 22%, 38%, 1);
---color-1-darker: hsla(183, 22%, 28%, 1);
-
---color-2-lighter: hsla(336, 13%, 36%, 1);
---color-2-darker: hsla(336, 13%, 5%, 1);
---color-2-dark : hsla(336, 13%, 10%, 1);
---color-2-light: hsla(336, 13%, 26%, 1);
-
