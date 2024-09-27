@@ -267,19 +267,19 @@
 
 @media screen and (max-width: 800px) {
     .text-huge-title {
-        --text-multiplier : .84;
+        --text-multiplier : .74;
     }
 }
 
 @media screen and (max-width: 700px) {
     .text-huge-title {
-        --text-multiplier : .74;
+        --text-multiplier : .64;
     }
 }
 
 @media screen and (max-width: 600px) {
     .text-huge-title {
-        --text-multiplier : .64;
+        --text-multiplier : .60;
     }
 }
 

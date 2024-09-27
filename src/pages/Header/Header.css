@@ -61,8 +61,7 @@
 .header_img {
     margin-top: -10rem;
     display: grid;
-    aspect-ratio: 1/1;
-    background-image: url(https://zackdiaz.com/images/intro-bg.webp);
+    aspect-ratio: 1/1;    background-image: url(https://yt3.googleusercontent.com/qeIWEXt-fn0vNNczIgkmbZ0V6HbQAkv9WVFfagnW_qlAfx4Oz8kUcfIksSK5GuokmaX2QfE=s900-c-k-c0x00ffffff-no-rj);
     background-repeat: no-repeat;
     background-position: center;
     background-size: cover;
@@ -90,5 +89,34 @@
 }
 
 
+{
+-webkit-tap-highlight-color: rgba(232, 230, 227, 0); }
 
--webkit-tap-highlight-color: rgba(232, 230, 227, 0);
+@media screen and (max-width: 1280px) {
+
+    .bio {
+        padding-top: 30rem;
+    }
+};
+
+@media (max-width: 827px) {
+    
+
+    .header_container h1 {
+        --scaler: 13vw;
+        --text-huge-size : 15.0rem;
+        font-size: clamp(var(--minFontSize), var(--scaler), var(--maxFontSize));
+        color: rgb(232, 230, 227);
+        transform: translateY(0px);
+        opacity: 1;
+        line-height: 1;
+        letter-spacing: -0.050em;
+        z-index: 1;
+       grid-column: 1/6;
+        display: grid;
+        justify-items: center;
+        scale: inherit
+    }
+
+
+}
