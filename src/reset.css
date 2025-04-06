@@ -46,4 +46,7 @@ video {
   max-width: 100%;
 }
 
+.flow > * + * {
+  margin-top: 2em;
+}
 

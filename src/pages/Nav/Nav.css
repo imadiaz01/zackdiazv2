@@ -24,19 +24,36 @@
   align-items: center;
 }
 
+.hamburger-icon:hover {
+  transform: scale(1.1);
+  background-color: #dfdfdf;
+  border-radius: 50%;
+
+}
 
 
 .x-close {
-  cursor: pointer;
-  width: 10dvw;
-  height: 10dvh;
-  background-color: #9747FF;
+  background: transparent;
+  border: none;
   border-radius: 50%;
-  transition: transform 0.3s ease-in-out;
-  justify-content: center;
+  cursor: pointer;
+  display: flex;
   align-items: center;
+  padding:0;
+  margin: 2dvw 0dvw 0dvh 2dvh;
+  max-width: 2em;
+  max-height: 2.5rem;
+ 
+  flex-wrap: wrap;
+  width: 40px; /* Set button size */
+  height: 50px; /* Set button size */
 }
 
+
+.x-close svg:hover {
+  color: #ffffff;
+border-radius: 50%;
+}
 
 
 .nav-container {
@@ -68,11 +85,13 @@
 
 }
 
-.collapsed-mobile-menu svg {
-    
-  margin-top: -2dvh;
-  
+
+
+  .collapsed-mobile-menu {
+    animation: slidein 0.5s forwards;
+    overflow: visible; /* Ensure no clipping */
   }
+
 
 .branding {
     font-size: 1.8rem;
@@ -114,19 +133,16 @@
 
 }
 
+  @media only screen and (max-width: 1000px) {
 
-@media only screen and (max-width: 1200px) {
 
-.links_navbar {
-  display: none;
-}
-.nav-container {
-  position: fixed ;
-}
-
-}
-
-  @media only screen and (max-width: 900px) {
+    .links_navbar {
+      display: none;
+    }
+    .nav-container {
+      position: fixed ;
+    }
+  
 
 .navbar {
   height: 15dvh;
@@ -162,13 +178,6 @@
   min-height: 61dvh;
   }
 
-  .collapsed-mobile-menu.open {
-    transform: translateX(-100%);
-  transition: transform 0.3s ease-in-out;
-  z-index: 1000;
-    }
- 
-
 
 .branding {
   font-size: 1.8rem;
@@ -182,55 +191,42 @@
   .collapsed-mobile-menu {
     
    
-    grid-column: 2/4;
     
     cursor: pointer;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
     min-width: 50dvw;
     min-height: 61dvh;
-    margin-right: -10dvw;
-    left: 0;
-    
+  padding: 0;
+  left: 0;
+  margin-right: -2rem;
     }
   
   
 }
 
+  }
 
-@media only screen and (max-width: 450px) {
 
-  .collapsed-mobile-menu svg {
-    
-    margin-top: -2dvh;
-    animation-duration: 0.5s;
-    animation-name: slidein;
+
+
+  @keyframes slidein {
+    from {
+      transform: translateX(100%);
     }
-  
-  
-}
-
-@media only screen and (max-width: 400px) {
-
-  .collapsed-mobile-menu svg {
-    
-    margin-top: -3dvh;
-    animation-duration: 0.5s;
-    animation-name: slidein;
+    to {
+      transform: translateX(0);
     }
-  
-  
-}
-
-@media only screen and (max-width: 350px) {
-
-  .collapsed-mobile-menu svg {
-    
-    margin-top: -5dvh;
-    animation-duration: 0.5s;
-    animation-name: slidein;
-    
+  }
+  @keyframes slideout {
+    from {
+      transform: translateX(0);
     }
-  
-}
+    to {
+      transform: translateX(150%);
+    }
+  }
 
+
+  .slide-out{
+    animation: slideout 0.5s forwards;
   }

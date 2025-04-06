@@ -6,7 +6,7 @@ const Main = () => {
   return (
     <div>
       <div className='separator'></div>
-      <div id='Intro' className='bio'>
+      <div id='About' className='bio'>
      <h1 >Bio.</h1>
      <br />
 <p>
@@ -76,7 +76,7 @@ const Main = () => {
                                 <div className="timeline__header">
                                     <h4 className="timeline__title"><a href="https://www.youtube.com/watch?v=kpl-yHnldR0">De Mentira</a></h4>
                                     <h5 className="timeline__meta">Single from EP ''YXNG GOATZ"</h5>
-                                    <p className="timeline__timeframe">Novemember 2022</p>
+                                    <p className="timeline__timeframe">November 2022</p>
                                 </div>
                             </div>
                         </div>
