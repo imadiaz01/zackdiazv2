@@ -11,7 +11,6 @@
 /* Style the MobileMenu wrapper */
 
 .hamburger-menu {
-
   display: none;
 }
 .hamburger-icon {
@@ -26,7 +25,7 @@
 
 .hamburger-icon:hover {
   transform: scale(1.1);
-  background-color: #dfdfdf;
+  background-color: var(--color-gray-1);
   border-radius: 50%;
 
 }
@@ -51,13 +50,13 @@
 
 
 .x-close svg:hover {
-  color: #ffffff;
+  color: var(--color-gray-1);
 border-radius: 50%;
 }
 
 
 .nav-container {
-  background-color: rgb(30, 61, 63, 1);
+  
   display: grid;
   align-items: center;
   grid-template-columns: repeat(3, 1fr);
@@ -70,18 +69,17 @@ border-radius: 50%;
   transition: height 0.4s cubic-bezier(0.215, 0.61, 0.355, 1);
   position: absolute;
   grid-template-rows: repeat(6, 1);
-  
+  transition: all 0.2s ease-in-out;
  
 }
 
 .nav-container.sticky {
   --color-border: rgba(0, 0, 0, .08);
-    border-bottom: 1px solid var(--color-border);
     box-shadow: var(--box-shadow);
     position: fixed;
     z-index: 100;
     height: 7rem;
-    
+    transition: all 0.2s ease-in-out;
 
 }
 
@@ -98,16 +96,15 @@ border-radius: 50%;
     line-height: 1;
     letter-spacing: -0.03em;
     grid-row: 1;
+    justify-self: start;
    
-  
-    ;
 }
 
 .nav-container a {
 
   outline-color: initial;
   border-color: initial;
-  color: #dfdcd8;
+  color: var(--color-gray-1);
   text-rendering: optimizeLegibility;
   text-decoration: none;
 }
@@ -131,6 +128,34 @@ border-radius: 50%;
   list-style-type: none;
   justify-items: end;
 
+}
+
+.link_mobile {
+  background: transparent;
+  border: none;
+  border-radius: 50%;
+  cursor: auto;
+  align-items: center;
+  margin: 2dvw 0dvw 0dvh 2dvh;
+  
+}
+
+.link_mobile ul {
+  flex-direction: column;
+  list-style-type: none;
+  
+}
+
+.link_mobile a {
+
+ 
+  text-rendering: optimizeLegibility;
+  text-decoration: none;
+  font-size: x-large;
+  font-weight: 400;
+  cursor: pointer;
+  padding: 0.5rem ;
+  border-radius: 5px;
 }
 
   @media only screen and (max-width: 1000px) {
@@ -158,18 +183,18 @@ border-radius: 50%;
       grid-column: 3 / 4;
       grid-row: 1 / 2;
       justify-self: end;
-      height: 5dvh;
-      width: 5dvh;
+      height: 7dvh;
+      width: 7dvh;
       
   }
 
 .collapsed-mobile-menu {
   grid-column: 2/4;
   grid-row: 1 / 2;
-  cursor: pointer;
+  cursor: auto;
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
   transition: transform 0.3s ease;
-  background-color: #0e1616;
+  background-color: var(--mobile-bar-color)   ;
   position: absolute;
   position-area: left;
   border-radius: 5px;
@@ -185,6 +210,8 @@ border-radius: 50%;
   letter-spacing: -0.03em;
   grid-row: 1;
 }
+
+
 
 @media only screen and (max-width: 800px) {
 

@@ -29,8 +29,8 @@ padding-top: 40dvh;
 }
 
 p {
-   color: #dfdcd8;
-   grid-column: 2;
+    color: var(--color-text-dark);
+    grid-column: 2;
     max-width: 95rem ;
     font-family: var(--font-1);
     grid-column-start: 2;

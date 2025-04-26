@@ -10,13 +10,15 @@
     grid-auto-flow: column;
     scale: inherit;
     padding-bottom: 20rem;
+    transition: all 0.2s ease-in-out;
 }
 
 .header_container h1 {
+    transition: all 0.45s ease-in-out;
     --scaler: 13vw;
     --text-huge-size : 15.0rem;
     font-size: clamp(var(--minFontSize), var(--scaler), var(--maxFontSize));
-    color: rgb(232, 230, 227);
+    color: var(--color-gray-1);
     transform: translateY(0px);
     opacity: 1;
     line-height: 1;
@@ -57,11 +59,14 @@
 
     font-size: clamp(1rem, 2.5vw, 2rem); 
     
+    
 }
 
 .below-introheader h2, .mas {
     grid-row: 1;
     align-content: center;
+    color: var(--color-gray-1);
+    transition: all 0.45s ease-in-out;
 }
 
 .mas {
@@ -108,7 +113,7 @@
         --scaler: 13vw;
         --text-huge-size : 15.0rem;
         font-size: clamp(var(--minFontSize), var(--scaler), var(--maxFontSize));
-        color: rgb(232, 230, 227);
+        
         transform: translateY(0px);
         opacity: 1;
         line-height: 1;
